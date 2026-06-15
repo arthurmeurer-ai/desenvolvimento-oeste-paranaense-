@@ -124,7 +124,7 @@ nav a:hover {
     background-color: var(--off-white);
 }
 
-/* Cards das Cidades */
+/* Cards das Cidades com Imagens Corretas */
 .grid-cidades {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -140,7 +140,7 @@ nav a:hover {
 }
 
 .card-img {
-    height: 200px;
+    height: 220px;
     background-size: cover;
     background-position: center;
     display: flex;
@@ -151,7 +151,7 @@ nav a:hover {
 .card-img h3 {
     color: var(--pure-white);
     font-size: 1.8rem;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.9);
 }
 
 .card-body {
@@ -165,163 +165,4 @@ nav a:hover {
 }
 
 .card-body h4 span {
-    display: block;
-    color: var(--primary-green);
-    font-size: 1.15rem;
-    margin-top: 2px;
-}
-
-/* Gráficos e Interatividade */
-.charts-wrapper {
-    max-width: 700px;
-    margin: 0 auto 30px;
-    background: var(--pure-white);
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-}
-
-.chart-container h3 {
-    font-size: 1.1rem;
-    text-align: center;
-    margin-bottom: 15px;
-    color: var(--dark-gray);
-}
-
-.interactive-actions {
-    text-align: center;
-    margin-top: 30px;
-}
-
-.btn-action {
-    background-color: var(--primary-green);
-    color: var(--pure-white);
-    border: none;
-    padding: 12px 25px;
-    font-size: 1rem;
-    font-weight: bold;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 15px;
-    transition: background 0.3s;
-}
-
-.btn-action:hover {
-    background-color: #005c26;
-}
-
-.hidden-box {
-    display: none;
-    margin-top: 30px;
-    animation: fadeIn 0.5s ease-in-out forwards;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-/* Tabelas de Dados Extra */
-.table-container {
-    overflow-x: auto;
-    background: var(--pure-white);
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    text-align: left;
-}
-
-th, td {
-    padding: 15px;
-    border-bottom: 1px solid #ddd;
-}
-
-th {
-    background-color: var(--primary-green);
-    color: var(--pure-white);
-}
-
-tr:hover {
-    background-color: var(--off-white);
-}
-
-/* Rodapé e QR Code */
-footer {
-    background-color: #111;
-    color: #ccc;
-    padding: 40px 0;
-    font-size: 0.9rem;
-}
-
-.footer-grid {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 30px;
-}
-
-.footer-info h3 {
-    color: var(--pure-white);
-    margin-bottom: 15px;
-}
-
-.footer-info p {
-    margin-bottom: 8px;
-}
-
-.phone-link {
-    color: var(--pure-white);
-    font-weight: bold;
-    text-decoration: none;
-    font-size: 1.1rem;
-}
-
-.phone-link:hover {
-    text-decoration: underline;
-}
-
-.footer-qrcode {
-    text-align: center;
-    background: #222;
-    padding: 15px;
-    border-radius: 6px;
-    border-top: 3px solid var(--primary-green);
-}
-
-.footer-qrcode h4 {
-    color: var(--pure-white);
-    margin-bottom: 10px;
-    font-size: 0.85rem;
-}
-
-#qrcode-img {
-    width: 120px;
-    height: 120px;
-    background-color: var(--pure-white);
-    padding: 5px;
-    border-radius: 4px;
-}
-
-.footer-qrcode p {
-    margin-top: 5px;
-    font-size: 0.75rem;
-}
-
-@media(max-width: 768px) {
-    .footer-grid {
-        flex-direction: column;
-        text-align: center;
-    }
-    .logo-area {
-        flex-direction: column;
-        gap: 15px;
-    }
-    nav a {
-        margin: 0 10px;
-    }
-}
+    display
