@@ -1,1 +1,327 @@
+/* Reset e Variáveis de Cores (Destaque em Verde e Branco) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
+:root {
+    --primary-green: #007A33;
+    --light-green: #2E3B14;
+    --pure-white: #FFFFFF;
+    --off-white: #F4F7F5;
+    --dark-gray: #2C3E50;
+    --text-color: #333333;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--pure-white);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-padding {
+    padding: 60px 0;
+}
+
+.bg-light {
+    background-color: var(--off-white);
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title h2 {
+    color: var(--primary-green);
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+/* Header / Navbar */
+header {
+    background-color: var(--primary-green);
+    color: var(--pure-white);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.logo-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-area h1 span {
+    color: var(--light-green);
+    background-color: var(--pure-white);
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin-left: 5px;
+}
+
+nav a {
+    color: var(--pure-white);
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 600;
+    transition: opacity 0.3s;
+}
+
+nav a:hover {
+    opacity: 0.8;
+}
+
+/* Hero Banner */
+.hero {
+    background-image: linear-gradient(rgba(0, 122, 51, 0.75), rgba(0, 30, 10, 0.85)), url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1600&q=80');
+    background-size: cover;
+    background-position: center;
+    color: var(--pure-white);
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 30px;
+}
+
+.btn-main {
+    display: inline-block;
+    background-color: var(--pure-white);
+    color: var(--primary-green);
+    padding: 12px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 25px;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.btn-main:hover {
+    transform: scale(1.05);
+    background-color: var(--off-white);
+}
+
+/* Cards das Cidades */
+.grid-cidades {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card-cidade {
+    background: var(--pure-white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border-bottom: 4px solid var(--primary-green);
+}
+
+.card-img {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    padding: 20px;
+}
+
+.card-img h3 {
+    color: var(--pure-white);
+    font-size: 1.8rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-body h4 {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #555;
+}
+
+.card-body h4 span {
+    display: block;
+    color: var(--primary-green);
+    font-size: 1.15rem;
+    margin-top: 2px;
+}
+
+/* Gráficos e Interatividade */
+.charts-wrapper {
+    max-width: 700px;
+    margin: 0 auto 30px;
+    background: var(--pure-white);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.chart-container h3 {
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 15px;
+    color: var(--dark-gray);
+}
+
+.interactive-actions {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.btn-action {
+    background-color: var(--primary-green);
+    color: var(--pure-white);
+    border: none;
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background 0.3s;
+}
+
+.btn-action:hover {
+    background-color: #005c26;
+}
+
+.hidden-box {
+    display: none;
+    margin-top: 30px;
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Tabelas de Dados Extra */
+.table-container {
+    overflow-x: auto;
+    background: var(--pure-white);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+th, td {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: var(--primary-green);
+    color: var(--pure-white);
+}
+
+tr:hover {
+    background-color: var(--off-white);
+}
+
+/* Rodapé e QR Code */
+footer {
+    background-color: #111;
+    color: #ccc;
+    padding: 40px 0;
+    font-size: 0.9rem;
+}
+
+.footer-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.footer-info h3 {
+    color: var(--pure-white);
+    margin-bottom: 15px;
+}
+
+.footer-info p {
+    margin-bottom: 8px;
+}
+
+.phone-link {
+    color: var(--pure-white);
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.phone-link:hover {
+    text-decoration: underline;
+}
+
+.footer-qrcode {
+    text-align: center;
+    background: #222;
+    padding: 15px;
+    border-radius: 6px;
+    border-top: 3px solid var(--primary-green);
+}
+
+.footer-qrcode h4 {
+    color: var(--pure-white);
+    margin-bottom: 10px;
+    font-size: 0.85rem;
+}
+
+#qrcode-img {
+    width: 120px;
+    height: 120px;
+    background-color: var(--pure-white);
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.footer-qrcode p {
+    margin-top: 5px;
+    font-size: 0.75rem;
+}
+
+@media(max-width: 768px) {
+    .footer-grid {
+        flex-direction: column;
+        text-align: center;
+    }
+    .logo-area {
+        flex-direction: column;
+        gap: 15px;
+    }
+    nav a {
+        margin: 0 10px;
+    }
+}
