@@ -36,17 +36,17 @@
 
         <div class="grid-cidades">
             <div class="card-cidade">
-                <div class="card-img" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1599839384518-87da23a78964?auto=format&fit=crop&w=600&q=80');">
+                <div class="card-img" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1626244669894-3e91307bdfa5?auto=format&fit=crop&w=600&q=80');">
                     <h3>Cascavel</h3>
                 </div>
                 <div class="card-body">
                     <h4>Principal Meio Econômico: <span>Comércio, Serviços e Agroindústria</span></h4>
-                    <p>Cascavel atua como a capital médica, universitária e logística do Oeste. Seu PIB ultrapassa os R$ 19 bilhões. O capital circula intensamente através do setor de serviços e de grandes cooperativas agroindustriais que processam e exportam carnes e grãos a nível global.</p>
+                    <p>Cascavel atua como o polo médico, universitário e logístico do Oeste. Seu PIB ultrapassa os R$ 19 bilhões. O capital circula intensamente através do setor de serviços e de grandes cooperativas agroindustriais que processam e exportam carnes e grãos a nível global.</p>
                 </div>
             </div>
 
             <div class="card-cidade">
-                <div class="card-img" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1549877403-4c530540d5df?auto=format&fit=crop&w=600&q=80');">
+                <div class="card-img" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1605706536965-0f0cb7cd5148?auto=format&fit=crop&w=600&q=80');">
                     <h3>Foz do Iguaçu</h3>
                 </div>
                 <div class="card-body">
@@ -56,7 +56,7 @@
             </div>
 
             <div class="card-cidade">
-                <div class="card-img" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1530595467537-0b5996c41f2d?auto=format&fit=crop&w=600&q=80');">
+                <div class="card-img" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1610448721566-47369c768e70?auto=format&fit=crop&w=600&q=80');">
                     <h3>Toledo</h3>
                 </div>
                 <div class="card-body">
@@ -71,54 +71,19 @@
         <div class="container">
             <div class="section-title">
                 <h2>Indicadores Econômicos Reais</h2>
-                <p>Veja a comparação do Valor Bruto de Produção Agropecuária (VBP) e as forças motrizes da macroregião.</p>
+                <p>Veja abaixo o resumo do Valor Bruto de Produção Agropecuária (VBP) e utilize nosso painel interativo.</p>
             </div>
 
             <div class="charts-wrapper">
                 <div class="chart-container">
-                    <h3>Comparativo de Força Econômica (VBP Agropecuário em Bilhões R$)</h3>
+                    <h3>Comparativo Prévio de Força Econômica (VBP Agropecuário em Bilhões R$)</h3>
                     <canvas id="vbpChart"></canvas>
                 </div>
             </div>
 
             <div class="interactive-actions">
-                <p>Clique abaixo para expandir e carregar relatórios macroeconômicos detalhados sobre o fluxo de caixa do Oeste.</p>
-                <button class="btn-action" onclick="toggleDadosExtras()">Clique para mais dados econômicos</button>
-                
-                <div id="dados-extras" class="hidden-box">
-                    <div class="table-container">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Indicador (Dados Oficiais IBGE/SEAB)</th>
-                                    <th>Cascavel</th>
-                                    <th>Foz do Iguaçu</th>
-                                    <th>Toledo</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>PIB Aproximado</td>
-                                    <td>R$ 19,2 Bilhões</td>
-                                    <td>R$ 15,7 Bilhões</td>
-                                    <td>R$ 7,1 Bilhões</td>
-                                </tr>
-                                <tr>
-                                    <td>Foco de Atração de Capital</td>
-                                    <td>Exportação de Grãos, Saúde e Varejo</td>
-                                    <td>Royalties de Energia e Hotelaria</td>
-                                    <td>Suinocultura, Avicultura e Rações</td>
-                                </tr>
-                                <tr>
-                                    <td>Logística Chave</td>
-                                    <td>Entroncamento BR-277 / Ferroeste</td>
-                                    <td>Tríplice Fronteira Aeroporto Int.</td>
-                                    <td>Rodovias de Escoamento Interno</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
+                <p>Clique abaixo para abrir um painel completo de gráficos detalhados sobre o capital do Oeste em uma nova aba.</p>
+                <button class="btn-abrir-dados" id="btnRelatorio">Ver Gráficos Detalhados em Nova Aba</button>
             </div>
         </div>
     </section>
