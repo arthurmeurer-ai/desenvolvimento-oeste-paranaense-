@@ -1,18 +1,9 @@
-/* Reset e Variáveis de Cores (Destaque em Verde e Branco) */
+/* Configurações Globais */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-:root {
-    --primary-green: #007A33;
-    --light-green: #2E3B14;
-    --pure-white: #FFFFFF;
-    --off-white: #F4F7F5;
-    --dark-gray: #2C3E50;
-    --text-color: #333333;
+    font-family: 'Segoe UI', Arial, sans-serif;
 }
 
 html {
@@ -20,149 +11,289 @@ html {
 }
 
 body {
-    background-color: var(--pure-white);
-    color: var(--text-color);
-    line-height: 1.6;
+    background-color: #f0f4f1;
+    color: #2b3a30;
+    line-height: 1.7;
 }
 
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.section-padding {
-    padding: 60px 0;
-}
-
-.bg-light {
-    background-color: var(--off-white);
-}
-
-.section-title {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.section-title h2 {
-    color: var(--primary-green);
-    font-size: 2rem;
-    margin-bottom: 10px;
-}
-
-/* Header / Navbar */
+/* Header Moderno com Imagem de Fundo Escurecida */
 header {
-    background-color: var(--primary-green);
-    color: var(--pure-white);
-    padding: 20px 0;
+    background: linear-gradient(rgba(15, 44, 89, 0.85), rgba(30, 70, 32, 0.85)), 
+                url('https://images.unsplash.com/photo-1605000797499-95a51c5269ae?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+    color: white;
+    padding: 120px 20px;
+    text-align: center;
+}
+
+.header-overlay h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+
+.header-overlay p {
+    font-size: 1.3rem;
+    max-width: 800px;
+    margin: 0 auto;
+    opacity: 0.95;
+}
+
+/* Barra de Navegação */
+nav {
+    background-color: #0f2c59;
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-
-.logo-area {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo-area h1 span {
-    color: var(--light-green);
-    background-color: var(--pure-white);
-    padding: 2px 6px;
-    border-radius: 4px;
-    margin-left: 5px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
 nav a {
-    color: var(--pure-white);
-    text-decoration: none;
-    margin-left: 20px;
-    font-weight: 600;
-    transition: opacity 0.3s;
-}
-
-nav a:hover {
-    opacity: 0.8;
-}
-
-/* Hero Banner */
-.hero {
-    background-image: linear-gradient(rgba(0, 122, 51, 0.75), rgba(0, 30, 10, 0.85)), url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1600&q=80');
-    background-size: cover;
-    background-position: center;
-    color: var(--pure-white);
-    text-align: center;
-    padding: 100px 20px;
-}
-
-.hero h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    max-width: 800px;
-    margin: 0 auto 30px;
-}
-
-.btn-main {
     display: inline-block;
-    background-color: var(--pure-white);
-    color: var(--primary-green);
-    padding: 12px 30px;
+    color: #e0e6ed;
+    padding: 18px 25px;
     text-decoration: none;
     font-weight: bold;
-    border-radius: 25px;
-    transition: transform 0.3s, background-color 0.3s;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
 }
 
-.btn-main:hover {
-    transform: scale(1.05);
-    background-color: var(--off-white);
+nav a:hover, nav a.active {
+    color: white;
+    background-color: #1e4620;
 }
 
-/* Cards das Cidades com Imagens Corretas */
-.grid-cidades {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+/* Container Principal */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
 }
 
-.card-cidade {
-    background: var(--pure-white);
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    border-bottom: 4px solid var(--primary-green);
+/* Blocos de Seção */
+.section-block {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    margin-bottom: 50px;
 }
 
-.card-img {
-    height: 220px;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: flex-end;
-    padding: 20px;
+.section-block h2 {
+    color: #1e4620;
+    margin-bottom: 20px;
+    font-size: 2rem;
 }
 
-.card-img h3 {
-    color: var(--pure-white);
-    font-size: 1.8rem;
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.9);
+/* Tabela de Dados Complexos */
+.table-container {
+    overflow-x: auto;
+    margin: 30px 0 10px 0;
 }
 
-.card-body {
-    padding: 20px;
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    min-width: 600px;
 }
 
-.card-body h4 {
-    margin-bottom: 10px;
-    font-size: 1rem;
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+th {
+    background-color: #1e4620;
+    color: white;
+    font-weight: 600;
+}
+
+tr:hover {
+    background-color: #f7faf8;
+}
+
+.source-text {
+    font-size: 0.85rem;
+    color: #777;
+    font-style: italic;
+}
+
+/* --- ESTILIZAÇÃO DOS GRÁFICOS DINÂMICOS --- */
+.graphics-container {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 2px dashed #ddd;
+}
+
+.graphics-container h3 {
+    color: #0f2c59;
+    margin-bottom: 25px;
+    font-size: 1.5rem;
+}
+
+.graphic-section {
+    margin-bottom: 30px;
+}
+
+.graphic-section h4 {
+    font-size: 1.1rem;
     color: #555;
+    margin-bottom: 15px;
 }
 
-.card-body h4 span {
-    display
+.bar-chart {
+    background: #f9fbf9;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #e2ebd5;
+}
+
+.bar-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.bar-group:last-child {
+    margin-bottom: 0;
+}
+
+.bar-label {
+    width: 120px;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.bar-wrapper {
+    flex: 1;
+    background-color: #e9ecef;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.bar {
+    color: white;
+    padding: 8px 12px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-align: right;
+    border-radius: 4px;
+    transition: width 1s ease-in-out;
+}
+
+.bar-cascavel-bg { background: linear-gradient(90deg, #2e7d32, #4caf50); }
+.bar-toledo-bg { background: linear-gradient(90deg, #ef6c00, #ff9800); }
+.bar-foz-bg { background: linear-gradient(90deg, #1565c0, #2196f3); }
+
+
+/* --- LAYOUT DE CIDADES (ALTERNADO) --- */
+.city-section {
+    display: flex;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    margin-bottom: 60px;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.7s ease-out;
+}
+
+.city-section.inverse {
+    flex-direction: row-reverse;
+}
+
+/* Classe de animação disparada pelo JS */
+.city-section.active-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.city-image {
+    flex: 1;
+    min-height: 400px;
+}
+
+.city-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.city-info {
+    flex: 1.2;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Badges coloridas */
+.badge {
+    display: inline-block;
+    align-self: flex-start;
+    padding: 5px 15px;
+    border-radius: 20px;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+.badge-cascavel { background-color: #2e7d32; }
+.badge-toledo { background-color: #ef6c00; }
+.badge-foz { background-color: #1565c0; }
+
+.city-info h2 {
+    font-size: 2.2rem;
+    color: #111;
+    margin-bottom: 15px;
+}
+
+/* Vídeos Responsivos (16:9) */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    margin-top: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Rodapé */
+footer {
+    background-color: #0b1a0c;
+    color: #99aab5;
+    text-align: center;
+    padding: 30px;
+    font-size: 0.9rem;
+}
+
+/* Layout Responsivo para Telas Menores */
+@media (max-width: 900px) {
+    .city-section, .city-section.inverse {
+        flex-direction: column !important;
+    }
+    .city-image {
+        min-height: 280px;
+        height: 280px;
+    }
+    header h1 { font-size: 2.2rem; }
+    .city-info { padding: 25px; }
+    .bar-group { flex-direction: column; align-items: flex-start; }
+    .bar-label { width: 100%; margin-bottom: 5px; }
+    .bar-wrapper { width: 100%; }
+}
